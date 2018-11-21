@@ -11,12 +11,12 @@ import Document, {
 import * as React from 'react'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx: NextDocumentContext) {
+  public static async getInitialProps(ctx: NextDocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
     return { ...initialProps }
   }
 
-  render() {
+  public render() {
     return (
       <html lang="en">
         <Head>

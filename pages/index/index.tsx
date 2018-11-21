@@ -5,7 +5,7 @@ import TopNav from 'components/TopNav'
 import Style from './style.css'
 
 export default class Index extends React.Component {
-  render() {
+  public render() {
     return (
       <div className={Style.index}>
         <TopNav />
