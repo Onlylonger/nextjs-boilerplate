@@ -10,6 +10,9 @@
     "browser": true,
     "commonjs": true
   },
+  "globals": {
+    "process": true
+  },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "plugins": ["react"],
   "rules": {
