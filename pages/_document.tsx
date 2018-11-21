@@ -18,8 +18,25 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en">
         <Head>
+          <title>YDJ</title>
+          <meta charSet="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+          />
+          {/* keywords 相对应的搜索引擎支持权重下降 */}
+          <meta name="keywords" content="" />
+          <meta name="description" content="" />
+          <meta
+            name="format-detection"
+            content="telephone=no, address=no, email=no"
+          />
+          <meta name="robots" content="all" />
+          <meta name="author" content="" />
+          <meta name="copyright" content="" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <link
             rel="shortcut icon"
             href="/static/favicon.ico"
