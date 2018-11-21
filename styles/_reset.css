@@ -47,3 +47,17 @@ img {
 .clearfloat {
   zoom: 1;
 }
+
+/* ipad */
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 640px) {
+  body {
+    background-color: green;
+  }
+}
