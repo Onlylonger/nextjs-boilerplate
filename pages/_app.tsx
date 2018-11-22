@@ -9,6 +9,7 @@ import App, {
 import React from 'react'
 
 import { Store } from 'store'
+import 'styles/_reset.css'
 import withMobxStore from '../libs/withMobxStore'
 
 interface IProps {

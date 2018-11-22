@@ -19,5 +19,9 @@ module.exports = withTypescript(
       return config
     },
     cssModules: true,
+    cssLoaderOptions: {
+      importLoaders: 1,
+      localIdentName: '[hash:base64:4]',
+    },
   })
 )
