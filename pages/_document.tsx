@@ -19,8 +19,8 @@ export default class MyDocument extends Document {
   public render() {
     return (
       <html lang="en">
+        <title>YDJ</title>
         <Head>
-          <title>YDJ</title>
           <meta charSet="UTF-8" />
           <meta
             name="viewport"

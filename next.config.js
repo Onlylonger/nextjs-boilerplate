@@ -14,6 +14,7 @@ module.exports = withTypescript(
         components: path.resolve('./components'),
         styles: path.resolve('./styles'),
         pages: path.resolve('./pages'),
+        store: path.resolve('./store'),
       })
       return config
     },

@@ -1,9 +1,19 @@
+import { Provider } from 'mobx-react'
 import App, { Container, NextAppContext } from 'next/app'
 import React from 'react'
-import '../styles/_reset.css'
+import { Store } from 'store'
+import withMobxStore from '../libs/withMobxStore'
 
-export default class MyApp extends App {
-  public static async getInitialProps({ Component, router, ctx }: NextAppContext) {
+interface IProps {
+  mobxStore: Store
+}
+
+class MyApp extends App<IProps> {
+  public static async getInitialProps({
+    Component,
+    router,
+    ctx,
+  }: NextAppContext) {
     let pageProps = {}
 
     if (Component.getInitialProps) {
@@ -14,12 +24,15 @@ export default class MyApp extends App {
   }
 
   public render() {
-    const { Component, pageProps } = this.props
-
+    const { Component, pageProps, mobxStore } = this.props
     return (
       <Container>
-        <Component {...pageProps} />
+        <Provider store={mobxStore}>
+          <Component {...pageProps} />
+        </Provider>
       </Container>
     )
   }
 }
+
+export default withMobxStore(MyApp)
