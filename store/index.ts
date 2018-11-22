@@ -1,26 +1,21 @@
 import { action, observable } from 'mobx'
 
+import GlobalStore from './globalStore'
+
 let store: Store
 
 export class Store {
-  public timer: any = 0
+  public globalStore: GlobalStore = new GlobalStore()
   @observable public lastUpdate = 0
-  @observable public light = false
 
   constructor(isServer: boolean, lastUpdate: number) {
     this.lastUpdate = lastUpdate
   }
-
-  @action public start = () => {
-    this.timer = setInterval(() => {
-      this.lastUpdate = Date.now()
-      this.light = true
-    }, 1000)
-  }
-
-  public stop = () => clearInterval(this.timer)
 }
 
+// 根据判断当前环境是 服务端 还是客户端
+// 服务端 每次返回新实例
+// 客户端 根据是否 已经有单例 实例
 export function initializeStore(isServer: boolean, lastUpdate = Date.now()) {
   if (isServer) {
     return new Store(isServer, lastUpdate)

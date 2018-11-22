@@ -1,6 +1,7 @@
 import { NextAppContext } from 'next/app'
 import React from 'react'
-import { initializeStore, Store } from '../store'
+
+import { initializeStore, Store } from 'store'
 
 const isServer = typeof window === 'undefined'
 const __NEXT_MOBX_STORE__ = '__NEXT_MOBX_STORE__'
