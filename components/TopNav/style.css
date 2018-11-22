@@ -1,19 +1,38 @@
-@import '../../styles/_var.css';
-
 .topNav {
   width: 100%;
-  background-color: var(--theColor);
-
+  background-color: #fff;
   height: 60px;
-  & .topNavContent {
-    width: 1200px;
-    height: 100%;
-    line-height: 60px;
-    background-color: #fff;
-    margin: 0 auto;
-  }
-  & .topNavMenuWrap {
-    list-style: none;
-    display: flex;
-  }
+}
+
+.topNavContent {
+  width: 1200px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.topNavMenuWrap {
+  list-style: none;
+  display: flex;
+  margin-left: 239px;
+  color: #202133;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.topNavMenuLi {
+  margin: 0 80px;
+}
+
+.topNavMenuItem {
+  font-size: 18px;
+  display: inline;
+  padding-bottom: 2px;
+}
+
+.active {
+  font-size: 20px;
+  border-bottom: 3px solid #202133;
 }
