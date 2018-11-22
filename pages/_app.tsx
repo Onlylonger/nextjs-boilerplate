@@ -45,6 +45,7 @@ class MyApp extends App<IProps> {
 
   public componentDidMount() {
     window.addEventListener('resize', this.handleResize)
+    this.handleResize()
   }
 
   public componentWillUnmount() {
